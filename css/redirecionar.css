@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  position: absolute; 
+  top: 50%;           
+  left: 30px;         
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: start;
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  color: #78b159;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #000000;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+    background-color: #d8d5a7e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#typingEffect {
+    font-size: 2em;
+    margin: 10%;
+    color: #333;
+    width: max-content;
+    font-weight: 300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+.login-container {
+    position: absolute;
+    text-align: center;
+    right: 30px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+form {
+    margin: 20px 0;
+}
+
+a {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+  background-color: #78b159;
+}
+
+h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    position: absolute;
+    top: 20px;     
+    left: 30px;    
+    font-size: 2em; 
+    margin: 0;      
+    z-index: 1000;
+}
+
+.imagem-bioe {
+  position: absolute;
+  top: 10px; 
+  right: 15px; 
+  margin: 0;  
+  width: 10%;
+  width: auto;
+  height: auto;
+  height: 10%;
+}
+
+@media screen and (max-width: 1300px){
+  .login-container {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  body {
+    background-color: #f7f7f7;
+  }
+
+  .container p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: start;
+    overflow: hidden;
+    color: #f7f7f7;
+  }
+}
