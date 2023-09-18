@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/redirecionar.css">
     <title>BioÉquilibre</title>
-    <!-- teste 123 -->
 </head>
 
 <body>

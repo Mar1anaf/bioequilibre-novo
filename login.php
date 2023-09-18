@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     <div class="login-container">
         <div class="logo-container">
             <img src="..//bioequilibre-site/img/logo2-removebg-preview.png" alt="Logo" class="logo" width="100%">
-            <h1>Crie sua conta </h1>
+            <h1>Bem vindo de volta</h1>
         </div>
         <form class="login-form">
             <p>Endereço de email</p>
