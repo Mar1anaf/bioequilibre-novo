@@ -168,7 +168,7 @@ body {
 .logo {
   margin-right: 40%;
   width: 5%;
-  top: 1,5%;
+  margin-top: 2%; /* Altere este valor para mover o logotipo para baixo */
 }
 
 a {

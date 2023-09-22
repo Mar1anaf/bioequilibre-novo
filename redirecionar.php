@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/redirecionar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>BioÉquilibre</title>
 </head>
 
 <body>
-
-    <div>
-        <h2>BioÉquilibre</h2>
+    <div class="seta">
+    <a href="index.html" class="arrow-back" style="position: absolute; top: 20px; left: 20px;">
+        <i class="fas fa-arrow-left"></i>
+    </a>    
     </div>
 
     <div class="container">
