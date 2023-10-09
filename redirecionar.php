@@ -10,8 +10,8 @@
 
 <body>
     <div class="seta">
-    <a href="index.html" class="arrow-back" style="position: absolute; top: 20px; left: 20px;">
-        <i class="fas fa-arrow-left"></i>
+    <a href="./index.php" class="arrow-back" style="position: absolute; top: 20px; left: 20px;">
+        <i class="fas fa-arrow-left" href="./index.php"></i>
     </a>    
     </div>
 

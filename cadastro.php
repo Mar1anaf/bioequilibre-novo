@@ -22,15 +22,15 @@
             <img src="./img/logo2-removebg-preview.png" alt="Logo" class="logo" width="100%">
             <h1>Crie sua conta </h1>
         </div>
-        <form class="login-form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <form class="login-form" method="post" action="cadastro_processo.php">
             <p>Seu nome</p>
-            <input type="text" placeholder="Nome de usuário" class="input-field">
+            <input type="text" name="nome" placeholder="Nome de usuário" class="input-field">
             <p>Endereço de email</p>
-            <input type="email" placeholder="Endereço de email" class="input-field">
+            <input type="email" name="email" placeholder="Endereço de email" class="input-field">
             <p>Senha</p>
-            <input type="password" placeholder="Senha" class="input-field">
+            <input type="password" name="senha" placeholder="Senha" class="input-field">
             <p>Data de nascimento</p>
-            <input type="date" placeholder="Senha" class="input-field">
+            <input type="date" name="datanasc" placeholder="Senha" class="input-field">
             <button type="submit" class="login-button">Continuar</button>
 
         </form>

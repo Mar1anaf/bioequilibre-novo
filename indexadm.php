@@ -50,11 +50,13 @@ include 'conexao.php';
 
     <div class="box-busca">
         <div class="search-box">
-            <form method="post" action="#">
+            <form method="post" action="busca.php">
                 <input type="text" class="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
                 <button class="search-box-button"><ion-icon class="search-icon" name="search"></ion-icon></button>
             </form>
         </div>
+        <div class="search-results">
+         </div>
     </div>
 
     <section class="products">
@@ -69,10 +71,10 @@ include 'conexao.php';
                     $produto_id = $row['produto_id'];
                     $produto_nome = $row['produto_nome'];
                     $produto_preco = $row['produto_preco'];
-                    $produto_img1 = $row['produto_img1'];
+                    $produto_imgproduto = $row['produto_imgproduto'];
                     // Exiba os dados na sua estrutura HTML
                     echo "<div class='product'>";
-                    echo "<img src='$produto_img1'>";
+                    echo "<img src='$produto_imgproduto'>";
                     echo "<div class='product-info' id='produto_$produto_id'>";
                     echo "<h4 class='product-title'>$produto_nome</h4>";
                     echo "<p class='product-price'>R$$produto_preco</p>";

@@ -389,3 +389,56 @@ nav {
   text-align: right;
   /* Alinhe o texto à direita */
 }
+
+.container {
+    max-width: auto; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 20px; /* Espaçamento interno do container */
+    background-color: #fff; /* Cor de fundo do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra do container */
+    border-radius: 10px; /* Bordas arredondadas do container */
+    color: #000;
+}
+
+/* Estilo para o conteúdo principal do produto dentro do container */
+.main-content {
+    padding: 20px; /* Espaçamento interno do conteúdo */
+}
+
+.product-description{
+    max-width: 400px; /* Largura máxima do container */
+    height: 500px;
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 20px; /* Espaçamento interno do container */
+    background-color: #78b159; /* Cor de fundo do container */
+    border-radius: 10px; /* Bordas arredondadas do container */
+    color: #000;
+}
+
+.product-price{
+    text-align: center;
+    background-color: #399d23;
+    padding: 10px; /* Espaçamento interno do container */
+    border-radius: 10px; /* Bordas arredondadas do container */
+    color: #000;
+    max-width: 90px; /* Largura máxima do container */
+
+}
+
+.buy-now-button {
+    background-color: #d8d5a7;
+    color: black;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+}
+
+.buy-now-button:hover {
+    background-color: #9b9975;
+}
+/* Outros estilos específicos para o conteúdo dentro do container podem ser adicionados aqui */
+
