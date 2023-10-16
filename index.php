@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexao.php';
 ?>
 <!DOCTYPE html>
@@ -24,9 +25,19 @@ include 'conexao.php';
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="./redirecionar.php"><ion-icon name="person-circle-outline"></ion-icon>Entrar</a></li>
                 <?php
-                echo "<a href='#' class='add-to-cart-button' onclick='addToCart()'><ion-icon name='cart-outline' class='cart-icon'></ion-icon>Carrinho</a>";
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                    echo '<ion-icon name="person"></ion-icon>';
+                    echo '<a href="logout.php">Sair</a>';
+                    session_destroy();
+                } else {
+                    echo '<ion-icon name="person"></ion-icon>';
+                    echo '<a href="redirecionar.php">Entrar</a>';
+                }
+                ?>
+                
+                <?php
+                echo "<a href='carrinho.php' class='add-to-cart-button' onclick='addToCart()'><ion-icon name='cart-outline' class='cart-icon'></ion-icon>Carrinho</a>";
                 echo "<span id='cart-count'>0</span>";
                 echo "</div>";
                 ?>
@@ -65,14 +76,6 @@ include 'conexao.php';
 
         </head>
 
-        <body>
-            <div class="hamburguer" onclick="toggleMenu()">&#9776;</div>
-
-            <div class="menu" id="menu">
-                <div class="menu-item">Item 1</div>
-                <div class="menu-item">Item 2</div>
-                <div class="menu-item">Item 3</div>
-            </div>
 
             <section class="products">
                 <div class="all-products">
@@ -88,13 +91,23 @@ include 'conexao.php';
                             $produto_preco = $row['produto_preco'];
                             $produto_imgproduto = $row['produto_imgproduto'];
                             // Exiba os dados na sua estrutura HTML
+                            echo "<a href='detalhes.php?id=$produto_id'>";
                             echo "<div class='product'>";
                             echo "<img src='$produto_imgproduto'>";
                             echo "<div class='product-info' id='produto_$produto_id'>";
                             echo "<h4 class='product-title'>$produto_nome</h4>";
-                            echo "<p class='product-price'>R$$produto_preco</p>";
+                            echo "<p class='product-price'>$produto_preco</p>";
                             echo "</div>";
                             echo "</div>";
+                            echo "</a>";
+                            // // Adicionando um botão/formulário para adicionar ao carrinho
+                            // echo "<form action='carrinho_processo.php' method='POST'>";
+                            // echo "<input type='hidden' name='produto_id' value='$produto_id'>";
+                            // echo "<button type='submit' class='add-to-cart-btn'>Adicionar ao Carrinho</button>";
+                            // echo "</form>";
+
+                            // echo "</div>";
+                            // echo "</div>";
                         }
                     } else {
                         echo "Nenhum produto encontrado."; // Caso a tabela esteja vazia

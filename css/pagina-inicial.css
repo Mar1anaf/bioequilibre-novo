@@ -389,3 +389,64 @@ nav {
   text-align: right;
   /* Alinhe o texto à direita */
 }
+
+a {
+  text-decoration: none!important;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  display: none;
+}
+
+#burguer{
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:450px){
+  #burguer {
+      display: flex;
+  }    
+}
+
+@media screen and (min-width:450px) and (max-width:900px) {
+  #burguer {
+      display: flex;
+  }    
+}
+
+@media screen and (min-width:900px) {
+  #burguer {
+      display: none;
+  }
+
+  nav {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  ul {
+      display: flex;
+      width: 100%;
+      text-align: center;
+      justify-content: space-evenly;
+  };
+
+  li {
+      display: flex;
+  }
+}

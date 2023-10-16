@@ -42,14 +42,10 @@ const mobileNavbar = new MobileNavbar(
 );
 mobileNavbar.init();
 
-let menuVisivel = false; // Variável para controlar a visibilidade do menu
-const menu = document.getElementById('menu');
-
-function toggleMenu() {
-  if (menuVisivel) {
-    menu.classList.remove('active'); // Fecha o menu
+function clickMenu() {
+  if (nav.style.display === 'flex') {
+      nav.style.display = 'none';
   } else {
-    menu.classList.add('active'); // Abre o menu
+      nav.style.display = 'flex';
   }
-  menuVisivel = !menuVisivel; // Inverte o estado de visibilidade do menu
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -16,429 +16,112 @@ body {
   background: #d8d5a7;
 }
 
-.home {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-  background: url(../img/banner-2\ copiar.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
+/* Resto do seu CSS aqui */
+
+/* Adicione a seção de estilos para o carrossel abaixo */
+/* Estilos para o carrossel */
+.slider {
+    width: 100%;
 }
 
-.home-content {
-  background-color: transparent;
-  max-width: 600px;
+.slider img {
+    width: 100%;
 }
 
-.home-content h1 {
-  font-size: 56px;
-  font-weight: 700;
+.prev,
+.next {
+    display: inline-block;
+    margin: 10px;
+    background: #d8d5a7;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-.home-content h3 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #d8d5a7;
+.prev {
+    float: left;
 }
 
-.home-content p {
-  font-size: 16px;
-  margin: 20px 0 40px;
+.next {
+    float: right;
 }
 
-.home-content .btn-box {
-  width: 345px;
-  height: 50px;
-  background: transparent;
+.prev:hover,
+.next:hover {
+    background: #9b9975;
 }
 
-.btn-box a {
-  position: relative;
-  width: 150px;
-  height: 100%;
-  background: #d8d5a7;
-  border: 2px solid #d8d5a7;
-  border-radius: 4px;
-  font-size: 19px;
-  color: #000000;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  overflow: hidden;
+/* Estilo para a imagem principal */
+.product-main-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
-.search-bar {
-  height: 18%;
-  background-color: transparent;
-  border-radius: 7px;
+/* Outros estilos específicos para o conteúdo dentro do container podem ser adicionados aqui */
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    margin: 2rem;
 }
 
-.products-class h1 {
-  color: #000000;
-  display: flex;
-  justify-content: center;
-  font-size: 56px;
-  font-weight: 700;
-}
-
-
-/*barra de pesquisa*/
-
-.box-busca {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.search-box-input::placeholder {
-
-  color: #ffffff;
-  opacity: 0.6;
-}
-
-.search-box-input::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.search-box-input::-moz-placeholder {
-  color: #ffffff;
-}
-
-.search-box-input:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.search-box form {
-
-  display: flex;
-  border-radius: 50px;
-  background-color: #000000;
-  height: 45px;
-}
-
-.search-box:hover .search-box-input {
-
-  padding-left: 2em;
-  padding-right: 1em;
-  width: 250px;
-}
-
-.search-box-input {
-  outline: 0;
-  font-size: 1.2em;
-  color: #fff;
-  width: 0;
-  padding: 0;
-  border: none;
-  background: none;
-  transition: .45s;
-}
-
-.search-box-button {
-  display: flex;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  background-color: #399d23;
-  border: none;
-  cursor: pointer;
-  transition: .3s;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-box-button:active {
-  transform: scale(.85);
-}
-
-.search-box-icone {
-  margin: auto;
-  color: #fff;
-}
-
-@media screen and (min-width: 400px) {
-
-  .search-box:hover .search-box-input {
-    width: 360px;
-  }
-}
-
-.search-icon {
-  font-size: 24px;
-}
-
-/*fim da barra de pesquisa*/
-/*header*/
-
-.logo {
-  margin-right: 40%;
-  width: 5%;
-  margin-top: 2%;
-  /* Altere este valor para mover o logotipo para baixo */
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-li :hover {
-  color: #0d3e03;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #000;
-  height: 8vh;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-}
-
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  transition: 0.3s;
-}
-
-@media (max-width: 999px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #23232e;
+.product-images {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
 }
 
-.nav-list.active {
-  transform: translateX(0);
+.product-images img {
+    height: 200px;
+    margin: 1rem;
+    transition: all 0.3s;
 }
 
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.product-main-image {
+    flex: 1;
 }
 
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
-
-
-
-/*fim do header*/
-/* produtos */
-
-.all-products {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.product {
-  overflow: hidden;
-  background: #ffffff;
-  color: #21201e;
-  text-align: center;
-  width: 240px;
-  height: 400px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.2rem;
-  margin: 2rem;
-}
-
-.product .product-title,
-.product .product-price {
-  font-size: 18px;
-}
-
-.product:hover img {
-  scale: 1.1;
-}
-
-.product:hover {
-  box-shadow: 5px 15px 25px #eeeeee;
-}
-
-.product img {
-  height: 200px;
-  margin: 1rem;
-  transition: all 0.3s;
-}
-
-.product a:link,
-.product a:visited {
-  color: #ececec;
-  display: inline-block;
-  text-decoration: none;
-  background-color: #399d23;
-  padding: 1.2rem 3rem;
-  border-radius: 1rem;
-  margin-top: 1rem;
-  font-size: 14px;
-  transition: all 0.2s;
-}
-
-.product a:hover {
-  transform: scale(1.1);
-}
-
-/* fim produtos */
-
-.footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-}
-
-
-@media screen and (max-width:1300px) {
-  .home {
-    background: url() no-repeat;
-    background-color: #000;
-  }
-}
-
-/* Estilos para o ícone de hamburguer */
-.hamburguer {
-  font-size: 24px;
-  cursor: pointer;
-  margin-left: 10px;
-  /* Espaçamento à esquerda */
-}
-
-/* Estilos para o menu */
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  /* Alinha à esquerda */
-  transition: max-height 0.5s ease-in-out;
-  /* Adiciona uma transição suave */
-}
-
-.menu.active {
-  max-height: 200px;
-  /* Altura máxima do menu quando estiver aberto */
-}
-
-.menu-item {
-  padding: 10px;
-  text-align: right;
-  /* Alinhe o texto à direita */
+.product-description {
+    max-width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #78b159;
+    border-radius: 10px;
+    color: #000;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
-    max-width: auto; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
-    padding: 20px; /* Espaçamento interno do container */
-    background-color: #fff; /* Cor de fundo do container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra do container */
-    border-radius: 10px; /* Bordas arredondadas do container */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     color: #000;
 }
 
-/* Estilo para o conteúdo principal do produto dentro do container */
-.main-content {
-    padding: 20px; /* Espaçamento interno do conteúdo */
+.product-images,
+.product-main-image,
+.product-description {
+    flex: 1;
+    margin: 0 10px;
 }
+/* Fim do estilo do carrossel */
 
-.product-description{
-    max-width: 400px; /* Largura máxima do container */
-    height: 500px;
-    margin: 0 auto; /* Centraliza o container na página */
-    padding: 20px; /* Espaçamento interno do container */
-    background-color: #78b159; /* Cor de fundo do container */
-    border-radius: 10px; /* Bordas arredondadas do container */
-    color: #000;
-}
-
-.product-price{
-    text-align: center;
-    background-color: #399d23;
-    padding: 10px; /* Espaçamento interno do container */
-    border-radius: 10px; /* Bordas arredondadas do container */
-    color: #000;
-    max-width: 90px; /* Largura máxima do container */
-
-}
-
-.buy-now-button {
-    background-color: #d8d5a7;
-    color: black;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    
-}
-
-.buy-now-button:hover {
-    background-color: #9b9975;
-}
-/* Outros estilos específicos para o conteúdo dentro do container podem ser adicionados aqui */
-
+/* Resto do seu CSS aqui */
