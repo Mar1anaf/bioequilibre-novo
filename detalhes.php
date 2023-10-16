@@ -13,9 +13,11 @@
 <body>
     <br>
     <header>
-        <a href="./index.php" class="arrow-back">
+    <div class="seta">
+        <a href="index.php" class="arrow-back" style="position: absolute; top: 20px; left: 20px; color: #78b159;">
             <i class="fas fa-arrow-left"></i>
         </a>
+    </div>
         <div class="box-busca">
             <div class="search-box">
                 <form method="post" action="busca.php">

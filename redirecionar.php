@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <div class="seta">
+        <a href="index.php" class="arrow-back" style="position: absolute; top: 20px; left: 20px; color: #78b159;">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
     <div class="container">
         <p>Mudamos o <span class="typed-text"></span><span class="cursor">&nbsp;</span>, com um <br>produto de cada vez</p>
     </div>
@@ -21,8 +26,8 @@
         <form id="loginForm" action="../bioequilibre-site/login.php" method="post">
             <h3 id="typingEffect">Comece aqui</h3>
             <div class="btn">
-            <a href="./login.php" type="submit" class="btn-redirecionar">Faça login</a>
-            <a href="./cadastro.php" type="submit" class="btn-redirecionar">Cadastre-se</a>
+                <a href="./login.php" type="submit" class="btn-redirecionar">Faça login</a>
+                <a href="./cadastro.php" type="submit" class="btn-redirecionar">Cadastre-se</a>
             </div>
         </form>
     </div>

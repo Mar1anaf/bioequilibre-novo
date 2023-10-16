@@ -29,9 +29,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="line3"></div>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="./redirecionar.php"><ion-icon name="person-circle-outline"></ion-icon>Entrar</a></li>
-                    <li><a href="#"><ion-icon name="cart-outline"></ion-icon>Carrinho</a></li>
-                </ul>
+                <?php
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                    echo '<ion-icon name="person"></ion-icon>';
+                    echo '<a href="logout.php">Sair</a>';
+                    session_destroy();
+                } else {
+                    echo '<ion-icon name="person"></ion-icon>';
+                    echo '<a href="redirecionar.php">Entrar</a>';
+                }
+                ?>
+                
+                <?php
+                echo "<a href='carrinho.php' class='add-to-cart-button' onclick='addToCart()'><ion-icon name='cart-outline' class='cart-icon'></ion-icon>Carrinho</a>";
+                echo "<span id='cart-count'>0</span>";
+                echo "</div>";
+                ?>
+            </ul>
             </nav>
         </header>
         <div class="products-class">
